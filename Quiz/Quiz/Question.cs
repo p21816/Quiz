@@ -15,7 +15,7 @@ namespace Quiz
             CorrectlyAnswered,
             IncorrectlyAnswered
         }
-        public QuestionState State { get; private set; }
+        public QuestionState State { get; protected set; }
         public Question()
         {
             State = QuestionState.NotAsked;
@@ -23,5 +23,6 @@ namespace Quiz
         abstract public void Ask(IQuestionForm form);
 
         abstract public void CheckAnswer(IQuestionForm form);
+        abstract public void ClearForm(IQuestionForm form);
     }
 }
