@@ -44,5 +44,10 @@ namespace Quiz
         {
             Text = Name;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            m.CheckAchi();
+        }
     }
 }

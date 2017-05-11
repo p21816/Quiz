@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Quiz
 {
@@ -10,9 +11,9 @@ namespace Quiz
     {
         List<AnswerData> answerData = new List<AnswerData>();
         List<Question> questions = new List<Question>();
-
+       
         Question currentQuestion = null;
-
+        int Achicount;
         public Model()
         {
             questions.Add(new AlternativQuestion());
@@ -30,6 +31,13 @@ namespace Quiz
             currentQuestion = questions[0];
             currentQuestion.Ask(form);
         }
-
+        public void CheckAchi()
+        {
+           if(answerData.Count==1)
+           {
+               Achicount++;
+           }
+           MessageBox.Show(String.Format("{0} ачивок",Achicount));
+        }
     }
 }
