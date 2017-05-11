@@ -21,6 +21,7 @@ namespace Quiz
             State = QuestionState.NotAsked;
         }
         abstract public void Ask(IQuestionForm form);
+
         abstract public void CheckAnswer(IQuestionForm form);
     }
 }

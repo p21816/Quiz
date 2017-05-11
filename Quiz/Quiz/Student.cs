@@ -8,6 +8,7 @@ namespace Quiz
 {
     class Student
     {
-
+        string Name;
+        
     }
 }
