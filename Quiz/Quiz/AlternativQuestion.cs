@@ -12,11 +12,10 @@ namespace Quiz
         string textQuestion = "eeaefaef";
         string correct = "e";
         string noCorrect = "a";
-        List<Control> controls = new List<Control>(); 
 
         public override void Ask(IQuestionForm form)
         {
-            form.askAlternativeQuestion(textQuestion, new List<string>() { "aaa", "fdfdf" });
+            form.askAlternativeQuestion(textQuestion, new List<string>() { "aaa", "fdfdf","sdfs" });
             State = QuestionState.Asked;
         }
 
