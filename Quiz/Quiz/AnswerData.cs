@@ -9,12 +9,12 @@ namespace Quiz
     struct AnswerData
     {
         // student, who had given the answer
-        Student student;
+        public Student student;
         // time, when the answer was given
-        DateTime time;
+        public DateTime time;
         // whether the answer was correct
-        bool isCorrect;
+        public bool isCorrect;
         // type of the question
-        string questionType;
+        public string questionType;
     }
 }

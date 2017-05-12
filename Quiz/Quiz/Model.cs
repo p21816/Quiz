@@ -11,12 +11,14 @@ namespace Quiz
     {
         List<AnswerData> answerData = new List<AnswerData>();
         List<Question> questions = new List<Question>();
-       
+        List<Student> users = new List<Student>();
         Question currentQuestion = null;
         int Achicount;
+        private Student currentStudent;
         public Model()
         {
             questions.Add(new AlternativQuestion());
+            users.Add(new Student("liskin"));
         }
         public void AskQuestion(IQuestionForm form)
         {
@@ -33,9 +35,16 @@ namespace Quiz
         }
         public void CheckAchi()
         {
-           if(answerData.Count==1)
+         
+           foreach (AnswerData answer in answerData)
            {
-               Achicount++;
+               if (answer.student == currentStudent)
+               {
+                     if (answerData.Count == 1)
+                   {
+                       Achicount++;
+                   }
+               }
            }
            MessageBox.Show(String.Format("{0} ачивок",Achicount));
         }

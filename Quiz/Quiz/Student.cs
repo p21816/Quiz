@@ -9,6 +9,13 @@ namespace Quiz
     class Student
     {
         string Name;
-        
+       public Student(string name)
+        {
+            this.Name = name;
+        }
+        public override string ToString()
+        {
+            return Name + " ";
+        }
     }
 }
