@@ -5,6 +5,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -31,40 +32,40 @@ namespace Quiz
             questionControls.Add(l);
 
 
+            for (int i = 0; i < answers.Count; i++)
+            {
+                Button b = new Button();
+                b.Location = new Point(b.Width * i+120, 60);
+                b.Text = answers[i];
+                b.Tag = i;
+                b.Click += B_Click;     
+                this.questionControls.Add(b);
+            }
 
-       
-            Button b = new Button();
-            b.Text = answers[0];
-            b.Location = new Point(30,60);
-            questionControls.Add(b);
-            //120 пикселей
-            Button b1 = new Button();
-            b1.Text = answers[1];
-            b1.Location = new Point(150,60);
-            questionControls.Add(b1);
 
-            Button b2 = new Button();
-            b2.Text = answers[1];
-            b2.Location = new Point(270, 60);
-            questionControls.Add(b2);
 
             this.Controls.AddRange(questionControls.ToArray());
             this.Update();
 
 
         }
+        private string stringAnswer;
+        private void B_Click(object sender, EventArgs e)
+        {
+            stringAnswer = ((Button)sender).Text;
+        }
 
         public bool checkAlternativeQuestion(string correctAnswer)
         {
-            if(questionControls[1]==correctAnswer)
-            {
 
-            } 
+            return correctAnswer == stringAnswer;
+            
         }
 
         public void clearAlternativeQuestion()
         {
-            throw new NotImplementedException();
+            questionControls.ForEach(new Action<Control>(Controls.Remove));
+            questionControls.Clear();
         }
 
         private void button1_Click(object sender, EventArgs e)
