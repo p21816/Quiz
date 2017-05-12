@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Quiz
 {
-    interface IQuestionForm
+    public interface IQuestionForm
     {
         void askAlternativeQuestion(string Question, List<string> answers);
         bool checkAlternativeQuestion(string correctAnswer);

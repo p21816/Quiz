@@ -13,11 +13,11 @@ namespace Quiz
     public partial class LoginForm : Form
     {
 
-        List<Student> users = new List<Student>();
+
         public LoginForm()
         {
             InitializeComponent();
-               comboBox1.Items.AddRange(users.ToArray());
+               comboBox1.Items.AddRange(Form1.m.users.ToArray());
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -34,7 +34,7 @@ namespace Quiz
         {
             if (comboBox1!=null)
             {
-                comboBox1.SelectedValue(users.ToString());
+                //comboBox1.SelectedValue(users.ToString());
                 Form1 newForm = new Form1();
 
                 newForm.Show();

@@ -13,7 +13,7 @@ namespace Quiz
 {
     public partial class Form1 : Form,IQuestionForm
     {
-        Model m = new Model();
+        static public Model m = new Model();
 
 
         public Form1()

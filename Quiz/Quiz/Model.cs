@@ -7,11 +7,11 @@ using System.Windows.Forms;
 
 namespace Quiz
 {
-    class Model
+    public class Model
     {
         List<AnswerData> answerData = new List<AnswerData>();
         List<Question> questions = new List<Question>();
-        List<Student> users = new List<Student>();
+        public List<Student> users = new List<Student>();
         Question currentQuestion = null;
         int Achicount;
         private Student currentStudent;
@@ -19,6 +19,7 @@ namespace Quiz
         {
             questions.Add(new AlternativQuestion());
             users.Add(new Student("liskin"));
+            users.Add(new Student("wpiskin"));
         }
         public void AskQuestion(IQuestionForm form)
         {
