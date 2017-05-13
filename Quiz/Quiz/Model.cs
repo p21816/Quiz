@@ -34,6 +34,7 @@ namespace Quiz
             currentQuestion = questions[0];
             currentQuestion.Ask(form);
         }
+        private int TempAchiInARow;
         public void CheckAchi()
         {
          
@@ -44,7 +45,21 @@ namespace Quiz
                      if (answerData.Count == 1)
                    {
                        Achicount++;
+                        TempAchiInARow++;
                    }
+                     if (TempAchiInARow==3)
+                    {
+                        Achicount++;
+                    }
+                     if(TempAchiInARow==5)
+                    {
+                        Achicount++;
+                    }
+                     if(answerData.Count==0)
+                    {
+                        Achicount++;
+                    }
+                     if 
                }
            }
            MessageBox.Show(String.Format("{0} ачивок",Achicount));

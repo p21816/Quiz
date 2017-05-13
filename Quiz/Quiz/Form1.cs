@@ -84,5 +84,13 @@ namespace Quiz
         {
             m.CheckAchi();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            LoginForm newForm = new LoginForm();
+
+            newForm.Show();
+            this.Hide();
+        }
     }
 }

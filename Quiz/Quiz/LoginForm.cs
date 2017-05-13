@@ -38,9 +38,15 @@ namespace Quiz
                 Form1 newForm = new Form1();
 
                 newForm.Show();
+                this.Hide();
+
             }
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Проект делали: Егор Лявенко и Артем Ангалевич\n Идею подкинул:Артем Ангалевич");
+        }
     }
 }
  
