@@ -8,7 +8,7 @@ namespace Quiz
 {
     interface IQuestionForm
     {
-        void askAlternativeQuestion(string Question, List<string> answers);
+        void askAlternativeQuestion(string questions, List<string> answers);
         bool checkAlternativeQuestion(string correctAnswer);
         void clearAlternativeQuestion();
     }

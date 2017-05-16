@@ -57,9 +57,18 @@ namespace Quiz
 
         public bool checkAlternativeQuestion(string correctAnswer)
         {
+            var isCorrect = correctAnswer == stringAnswer;
 
-            return correctAnswer == stringAnswer;
-            
+            if (isCorrect==true)
+                
+            {
+                MessageBox.Show("Correct!");
+                
+            }
+            AnswerData user = new AnswerData (null,DateTime.Now, isCorrect,"alternative");
+               
+            return isCorrect;
+
         }
 
         public void clearAlternativeQuestion()
@@ -71,12 +80,8 @@ namespace Quiz
         private void button1_Click(object sender, EventArgs e)
         {
             m.AskQuestion(this);
-           
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-            Text = Name;
-        }
+        
     }
 }

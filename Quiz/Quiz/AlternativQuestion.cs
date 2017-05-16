@@ -9,10 +9,11 @@ namespace Quiz
 {
      class AlternativQuestion:Question
     {
-        string textQuestion = "eeaefaef";
-        string correct = "e";
-        string noCorrect = "a";
-
+        string textQuestion= "dfdsf";
+        
+        //string correct = "e";
+        //string noCorrect = "a";
+        
         public override void Ask(IQuestionForm form)
         {
             form.askAlternativeQuestion(textQuestion, new List<string>() { "aaa", "fdfdf","sdfs" });

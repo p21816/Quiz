@@ -16,5 +16,17 @@ namespace Quiz
         bool isCorrect;
         // type of the question
         string questionType;
+
+        private object p;
+        private DateTime now;
+        private string v;
+
+        public AnswerData(object p, DateTime now, bool isCorrect, string v) : this()
+        {
+            this.p = p;
+            this.now = now;
+            this.isCorrect = isCorrect;
+            this.v = v;
+        }
     }
 }

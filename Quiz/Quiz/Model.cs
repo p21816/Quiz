@@ -10,7 +10,6 @@ namespace Quiz
     {
         List<AnswerData> answerData = new List<AnswerData>();
         List<Question> questions = new List<Question>();
-
         Question currentQuestion = null;
 
         public Model()
@@ -23,6 +22,7 @@ namespace Quiz
             {
                 currentQuestion.CheckAnswer(form);
                 // заполняем answerdata
+                answerData.Add(new AnswerData());
                 // очистиить форму
                 currentQuestion.ClearForm(form);
 
